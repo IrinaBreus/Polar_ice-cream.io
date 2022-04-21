@@ -1,0 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fredoka One', 'Hind Madurai', 'Roboto', sans-serif, cursive;
+}
+
+
+@import 'base/*.scss';
+@import 'blocks/*.scss';
