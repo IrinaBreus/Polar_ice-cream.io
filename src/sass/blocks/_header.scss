@@ -1,5 +1,5 @@
 header {
-    height: 862px;
+    min-height: 862px;
     padding: 42px 0 84px 0;
     background: rgba(242, 206, 218, 0.3);
     
@@ -27,18 +27,18 @@ header {
             font-style: normal;
             font-weight: 400;
             font-size: 14px;
-            line-height: 16px;
             color: #150101;
             text-decoration: none;
             &:hover {
                 font-weight: 700;
-                font-size: 15px;
-                line-height: 18px;
+                font-size: 14px;
                 color: #D23166;
             }
         }
         &__btn {
             grid-column: 5/6;
+            display: block;
+            margin-right: 0 auto;
         }
     }
     .promo {
@@ -62,8 +62,8 @@ header {
             font-family: 'Fredoka One';
             font-style: normal;
             font-weight: 400;
-            font-size: 57.33px;
-            line-height: 120.5%;
+            font-size: 57px;
+            line-height: 120%;
             color: #0F0101;
             margin-top: 10px;
             span {
@@ -83,9 +83,131 @@ header {
         }
         &__img {
             position: absolute;
+            max-width: 500px;
             top: -159px;
             right: -30px;
             z-index: -1;
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1200px) {
+    header {
+        .promo__img {
+            img {
+                opacity: .7;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    header {
+        .menu {
+            grid-template-columns: 1fr 5fr 2fr;
+            &__logo {
+                margin-left: 0;
+                margin: 0 auto;
+            }
+            &__lists {
+                grid-column: 2/3;
+                justify-content: space-evenly;
+            }
+            &__btn {
+                grid-column: 3/4;
+                margin: 0 auto;
+            }
+        }
+        .promo {
+            &__title {
+                font-size: 50px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        min-height: 662px;
+        padding: 36px 0 42px 0;
+        .menu {
+            grid-template-columns: 1fr 1fr 5fr;
+            &__logo {
+                margin-left: 0;
+                margin: 0 auto;
+            }
+            &__lists {
+                grid-column: 3/4;
+                justify-content: space-evenly;
+            }
+            &__btn {
+                display: none;
+            }
+        }
+        .promo {
+            &__subheader {
+                margin-top: 140px;
+            }
+            &__title {
+                font-size: 42px;
+            }
+            &__descr {
+                font-size: 16px;
+            }
+            &__img {
+                max-width: 80%;
+            }
+        }
+        
+    }
+}
+
+@media (max-width: 576px) {
+    header {
+        min-height: 600px;
+        padding: 32px 0 52px 0;
+        
+        .menu {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, auto);
+            justify-content: center;
+            
+            &__lists {
+                grid-column: unset;
+                grid-row: 2/3;
+            }
+            &__link {
+                font-size: 12px;
+                &:hover {
+                    font-size: 12px;
+                }
+            }
+        }
+        .promo {
+            padding-left: 0;
+            &__text {
+                max-width: 300px;
+            }
+            &__subheader {
+                margin-top: 80px;
+            }
+            &__title {
+                font-size: 24px;
+            }
+            &__descr {
+                font-size: 16px;
+                line-height: 24px;
+                margin-bottom: 40px;
+            }
+            &__img {
+                max-width: 280px;
+                top: -40px;
+                right: 0;
+            }
         }
     }
 }

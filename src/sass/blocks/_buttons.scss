@@ -9,8 +9,16 @@
     font-weight: 700;
     font-size: 16px;
     color: #FAFAFA;
+    transition: all 0.5s;
     &:hover {
-        box-shadow:  15px 15px 30px rgba(210, 49, 102, 0.6);
+        box-shadow:  10px 10px 20px rgba(210, 49, 102, 0.6);
         transform: translate(2px, 2px);
+    }
+}
+
+@media (max-width: 576px) {
+    .btns {
+        width: 145px;
+        height: 39px;
     }
 }
