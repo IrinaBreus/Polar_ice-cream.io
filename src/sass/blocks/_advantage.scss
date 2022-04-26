@@ -1,0 +1,48 @@
+.advantage {
+    padding: 100px 0;
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 250px);
+        grid-auto-rows: 200px;
+        gap: 20px 40px;
+        justify-content: center;
+        margin: 0 auto;
+        .card {
+            padding: 33px 26px 28px 26px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+            box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
+            &__img {
+                width: 54px;
+                height: 54px;
+                margin: 0 auto;
+                margin-bottom: 18px;
+                img {
+                    max-width: 100%;
+                    max-height: 100%;
+                    object-fit: cover;
+                }
+            }
+            &__title {
+                font-family: 'Hind Madurai';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 28px;
+                text-align: center;
+                color: #000000;
+                margin-bottom: 9px;
+            }
+            &__descr {
+                font-family: 'Hind Madurai';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 19px;
+                text-align: center;
+                color: #000000;
+                opacity: 0.7;
+            }
+        }
+    }
+}
